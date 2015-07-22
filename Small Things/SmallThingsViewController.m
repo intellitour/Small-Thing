@@ -33,6 +33,7 @@
     [super viewDidAppear:animated];
     
     //Fetch data from persistence
+    //O ideal seria fazer isso em uma classe separada. Não é responsabilidade do ViewController buscar dados no banco.
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"SmallThing"];
     NSFetchRequest *fetchRequest2 = [[NSFetchRequest alloc] initWithEntityName:@"Person"];
@@ -45,11 +46,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.tableView setDelegate:self];
+    [self.tableView setDelegate:self]; 
     [self.tableView setDataSource:self];
     
-    memory = [[NSMutableArray alloc] initWithObjects:@"Unexpected Visit", @"Laughing at a movie", @"Sharing news", nil];
-    person = [[NSMutableArray alloc] initWithObjects:@"Girlfriend", @"Sister", @"Aunt", nil];
+    //isso é desnecessário
+//    memory = [[NSMutableArray alloc] initWithObjects:@"Unexpected Visit", @"Laughing at a movie", @"Sharing news", nil];
+//    person = [[NSMutableArray alloc] initWithObjects:@"Girlfriend", @"Sister", @"Aunt", nil];
 }
 
 - (IBAction)unwindToSTVC:(UIStoryboardSegue *)sender {
@@ -66,22 +68,22 @@
 }
 
 #pragma - Table View Data Source
-- (NSInteger) tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.memory.count;
 }
 
-- (UITableViewCell *) tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString* identifier = @"customCell";
     SmallThingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
-    //NSString *memoryData = [self.memory objectAtIndex:indexPath.row];
-    NSManagedObject *memoryData = [self.memory objectAtIndex:indexPath.row];
-    //NSString *personData = [self.person objectAtIndex:indexPath.row];
-    NSManagedObject *personData = [self.person objectAtIndex:indexPath.row];
+//    NSString *memoryData = [self.memory objectAtIndex:indexPath.row];
+    NSManagedObject *memoryData = [self.memory objectAtIndex:indexPath.row]; //seria melhor usar a classe persistente em vez de NSManagedObject
+//    NSString *personData = [self.person objectAtIndex:indexPath.row];
+    NSManagedObject *personData = [self.person objectAtIndex:indexPath.row]; //idem
+    
     UIImage *image = [UIImage imageNamed:@"txt.png"];
     UIImage *image2 = [UIImage imageNamed:@"micro.png"];
-    [cell configureCellWithImage:image andTitle:[NSString stringWithFormat:@"%@", [memoryData valueForKey:@"title"]] andSubtitle:[NSString stringWithFormat:@"%@", [personData valueForKey:@"name"]] WithImage2:image2];
-    
+    [cell configureCellWithImage:image andTitle:[memoryData valueForKey:@"title"] andSubtitle:[personData valueForKey:@"name"] WithImage2:image2];
     return cell;
 }
 

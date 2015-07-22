@@ -38,20 +38,12 @@
 		A7F38F7E1B5471D5009C2B1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7F38F7C1B5471D5009C2B1A /* Main.storyboard */; };
 		A7F38F811B5471D5009C2B1A /* Small_Things.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7F38F7F1B5471D5009C2B1A /* Small_Things.xcdatamodeld */; };
 		A7F38F831B5471D5009C2B1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7F38F821B5471D5009C2B1A /* Assets.xcassets */; };
-		A7F38F861B5471D5009C2B1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7F38F841B5471D5009C2B1A /* LaunchScreen.storyboard */; };
 		A7F38F911B5471D5009C2B1A /* Small_ThingsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F38F901B5471D5009C2B1A /* Small_ThingsTests.m */; };
-		A7F38F9C1B5471D5009C2B1A /* Small_ThingsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F38F9B1B5471D5009C2B1A /* Small_ThingsUITests.m */; };
+		EBCD0BD91B5FBD9A009A7A13 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBCD0BD81B5FBD9A009A7A13 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		A7F38F8D1B5471D5009C2B1A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A7F38F681B5471D4009C2B1A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A7F38F6F1B5471D4009C2B1A;
-			remoteInfo = "Small Things";
-		};
-		A7F38F981B5471D5009C2B1A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A7F38F681B5471D4009C2B1A /* Project object */;
 			proxyType = 1;
@@ -106,14 +98,13 @@
 		A7F38F7D1B5471D5009C2B1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7F38F801B5471D5009C2B1A /* Small_Things.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Small_Things.xcdatamodel; sourceTree = "<group>"; };
 		A7F38F821B5471D5009C2B1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A7F38F851B5471D5009C2B1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7F38F871B5471D5009C2B1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7F38F8C1B5471D5009C2B1A /* Small ThingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Small ThingsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F38F901B5471D5009C2B1A /* Small_ThingsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Small_ThingsTests.m; sourceTree = "<group>"; };
 		A7F38F921B5471D5009C2B1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7F38F971B5471D5009C2B1A /* Small ThingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Small ThingsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F38F9B1B5471D5009C2B1A /* Small_ThingsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Small_ThingsUITests.m; sourceTree = "<group>"; };
 		A7F38F9D1B5471D5009C2B1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBCD0BD81B5FBD9A009A7A13 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,13 +117,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A7F38F891B5471D5009C2B1A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A7F38F941B5471D5009C2B1A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -211,7 +195,6 @@
 			children = (
 				A7F38F701B5471D4009C2B1A /* Small Things.app */,
 				A7F38F8C1B5471D5009C2B1A /* Small ThingsTests.xctest */,
-				A7F38F971B5471D5009C2B1A /* Small ThingsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,7 +208,6 @@
 				A74BE9651B5D5B4D00A02119 /* FPPopover.podspec */,
 				A7F38F7C1B5471D5009C2B1A /* Main.storyboard */,
 				A7F38F821B5471D5009C2B1A /* Assets.xcassets */,
-				A7F38F841B5471D5009C2B1A /* LaunchScreen.storyboard */,
 				A7F38F871B5471D5009C2B1A /* Info.plist */,
 				A7F38F7F1B5471D5009C2B1A /* Small_Things.xcdatamodeld */,
 				A7F38F731B5471D4009C2B1A /* Supporting Files */,
@@ -235,6 +217,7 @@
 				A74BE9B81B5DBECA00A02119 /* SmallThing+CoreDataProperties.h */,
 				A74BE9B91B5DBECA00A02119 /* SmallThing.h */,
 				A74BE9BA1B5DBECA00A02119 /* SmallThing.m */,
+				EBCD0BD81B5FBD9A009A7A13 /* LaunchScreen.xib */,
 			);
 			path = "Small Things";
 			sourceTree = "<group>";
@@ -303,24 +286,6 @@
 			productReference = A7F38F8C1B5471D5009C2B1A /* Small ThingsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A7F38F961B5471D5009C2B1A /* Small ThingsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A7F38FA61B5471D5009C2B1A /* Build configuration list for PBXNativeTarget "Small ThingsUITests" */;
-			buildPhases = (
-				A7F38F931B5471D5009C2B1A /* Sources */,
-				A7F38F941B5471D5009C2B1A /* Frameworks */,
-				A7F38F951B5471D5009C2B1A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A7F38F991B5471D5009C2B1A /* PBXTargetDependency */,
-			);
-			name = "Small ThingsUITests";
-			productName = "Small ThingsUITests";
-			productReference = A7F38F971B5471D5009C2B1A /* Small ThingsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -334,10 +299,6 @@
 						CreatedOnToolsVersion = 7.0;
 					};
 					A7F38F8B1B5471D5009C2B1A = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = A7F38F6F1B5471D4009C2B1A;
-					};
-					A7F38F961B5471D5009C2B1A = {
 						CreatedOnToolsVersion = 7.0;
 						TestTargetID = A7F38F6F1B5471D4009C2B1A;
 					};
@@ -358,7 +319,6 @@
 			targets = (
 				A7F38F6F1B5471D4009C2B1A /* Small Things */,
 				A7F38F8B1B5471D5009C2B1A /* Small ThingsTests */,
-				A7F38F961B5471D5009C2B1A /* Small ThingsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -369,7 +329,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A74BE9B01B5D830F00A02119 /* JosefinSans-ThinItalic.ttf in Resources */,
-				A7F38F861B5471D5009C2B1A /* LaunchScreen.storyboard in Resources */,
 				A74BE96C1B5D5B4D00A02119 /* FPPopover.podspec in Resources */,
 				A74BE9AE1B5D830A00A02119 /* JosefinSans-SemiBoldItalic.ttf in Resources */,
 				A74BE9AA1B5D82FF00A02119 /* JosefinSans-Italic.ttf in Resources */,
@@ -382,6 +341,7 @@
 				A74BE97C1B5D771D00A02119 /* stop2.png in Resources */,
 				A74BE9AB1B5D830200A02119 /* JosefinSans-LightItalic.ttf in Resources */,
 				A7F38F7E1B5471D5009C2B1A /* Main.storyboard in Resources */,
+				EBCD0BD91B5FBD9A009A7A13 /* LaunchScreen.xib in Resources */,
 				A74BE9A91B5D82FA00A02119 /* JosefinSans-Light.ttf in Resources */,
 				A74BE9A71B5D82F400A02119 /* JosefinSans-Bold.ttf in Resources */,
 				A74BE9AC1B5D830500A02119 /* JosefinSans-Regular.ttf in Resources */,
@@ -391,13 +351,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A7F38F8A1B5471D5009C2B1A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A7F38F951B5471D5009C2B1A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -434,14 +387,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7F38F931B5471D5009C2B1A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A7F38F9C1B5471D5009C2B1A /* Small_ThingsUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -449,11 +394,6 @@
 			isa = PBXTargetDependency;
 			target = A7F38F6F1B5471D4009C2B1A /* Small Things */;
 			targetProxy = A7F38F8D1B5471D5009C2B1A /* PBXContainerItemProxy */;
-		};
-		A7F38F991B5471D5009C2B1A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A7F38F6F1B5471D4009C2B1A /* Small Things */;
-			targetProxy = A7F38F981B5471D5009C2B1A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -464,14 +404,6 @@
 				A7F38F7D1B5471D5009C2B1A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A7F38F841B5471D5009C2B1A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A7F38F851B5471D5009C2B1A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -564,6 +496,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Small Things/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lsr.Small-Things";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -575,6 +508,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Small Things/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lsr.Small-Things";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -586,6 +520,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Small ThingsTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lsr.Small-ThingsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -598,34 +533,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Small ThingsTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lsr.Small-ThingsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Small Things.app/Small Things";
-			};
-			name = Release;
-		};
-		A7F38FA71B5471D5009C2B1A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "Small ThingsUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lsr.Small-ThingsUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "Small Things";
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		A7F38FA81B5471D5009C2B1A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "Small ThingsUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lsr.Small-ThingsUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "Small Things";
-				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
@@ -655,15 +567,6 @@
 			buildConfigurations = (
 				A7F38FA41B5471D5009C2B1A /* Debug */,
 				A7F38FA51B5471D5009C2B1A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A7F38FA61B5471D5009C2B1A /* Build configuration list for PBXNativeTarget "Small ThingsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A7F38FA71B5471D5009C2B1A /* Debug */,
-				A7F38FA81B5471D5009C2B1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

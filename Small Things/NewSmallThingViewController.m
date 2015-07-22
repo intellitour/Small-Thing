@@ -162,14 +162,19 @@
     [playButton setEnabled:YES];
 }
 
+//Não é responsabilidade do ViewController salvar objetos no banco de dados. Faça isso em uma classe separada.
 - (IBAction)saveST:(id)sender {
     NSManagedObjectContext *context = [self managedObjectContext];
     
     //Create a new managed object
+    //O ideal é usar a classe persistente em vez de NSManagedObject
     NSManagedObject *newSmallThing = [NSEntityDescription insertNewObjectForEntityForName:@"SmallThing" inManagedObjectContext:context];
     [newSmallThing setValue:self.titleEditText.text forKey:@"title"];
-    [newSmallThing setValue:self.audioOutput.dataRepresentation forKey:@"smallaudio"];
     
+    //Precisei fazer esse ajuste para compatibilizar com o iOS 8
+    [newSmallThing setValue:[NSData dataWithContentsOfURL:self.audioOutput] forKey:@"smallaudio"];
+    
+    //O ideal é usar a classe persistente em vez de NSManagedObject
     NSManagedObject *newPerson = [NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:context];
     [newPerson setValue:self.personEditText.text forKey:@"name"];
     [newPerson setValue:newSmallThing forKey:@"smallthing"];
@@ -178,6 +183,14 @@
     // Save the object to persistent store
     if (![context save:&error]) {
         NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }else {
+        /** Seu botão 'Save' estava com duas ações. Isso não funciona.
+         Só a primeira ação vai ser capturada - que no caso era um unwindSegue.
+         Retirei a ação do unwind para que este mecanismo de salvar funcionasse.
+         A segue de volta só é feita em caso de sucesso, na linha abaixo.
+         Precisei mapeá-la no Storyboard com o identificador abaixo.
+         **/
+        [self performSegueWithIdentifier:@"unwindToSTVC-Segue" sender:nil];
     }
     
     
